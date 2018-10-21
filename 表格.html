@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <h4> 两行两列三数据的表格<h4>
+
+  <table border="1">
+  <caption>标题</caption><!----------写在table里面-------------->
+  <tr>
+  <td>row1,cell1</td>
+  <td>row1,cell2</td>
+  </tr>
+  <tr>
+  <td>row2,cell1</td>
+  <td>&nbsp;</td><!----------占位符-------------->
+  </tr>
+  </table>
+
+<h4>有合并的单元格1</h4>
+  <table border="1">
+  <tr>
+  <th>姓名</th><!----------tr表行，td表列，th表表头的字-------------->
+  <th colspan="2">电话</th><!----------colspan 列分两个-------------->
+  </tr>
+  
+  <tr>
+  <td>号码</td>
+  <td>1234</td>
+  <td>1234</td>
+  </tr>
+  </table>
+
+<h4>有合并的单元格2</h4>
+  <table border="1">
+  <tr>
+  <th>姓名</th>
+  <td>ws</td>
+  </tr>
+  <tr>
+  <th rowspan="2">电话</th>
+  <td>1234</td>
+  <tr>
+  <td>1234</td>
+  </tr><!----------此处三列-------------->
+  </table>
+  
+
+
+<h4>表格内有表格，数字及字符标签</h4>
+  <table border="1">
+<tr>
+  <td>
+   <p>这是一个段落。</p>
+   <p>这是另一个段落。</p>
+  </td>
+  <td>这个单元包含一个表格：
+   <table border="1">
+   <tr>
+     <td>A</td>
+     <td>B</td>
+   </tr>
+   <tr>
+     <td>C</td>
+     <td>D</td>
+   </tr>
+   </table>
+  </td>
+</tr>
+<tr>
+  <td>这个单元包含一个列表：
+  <ol start="50"><!----------有序--------------><!----------start定义开始的数字-------------->
+  <li>打开冰箱门</li>
+  <li>把大象放进去</li>
+  <li>关上冰箱门</li>
+</ol>
+
+<p>无序列表：</p>
+<ul><!----------无序-------------->
+  <li>雪碧</li>
+  <li>可乐</li>
+  <li>凉茶</li>
+</ul>
+  </td>
+  <td>HELLO</td>
+</tr>
+</table>
+
+
+
+<h4>带有 cellpadding：</h4>
+<table border="1" 
+cellpadding="30"><!----------表格放大-------------->
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+
+
+<h4>带有 cellspacing：</h4>
+<table border="1" 
+cellspacing="30"
+bgcolor="red"><!----------cellspacing单元格间距-------------->
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+
+ <h4>带有 align</h4>
+<table width="400" height="400" border="1"><!----------单元格变宽 高-------------->
+ <tr>
+  <th align="left">消费项目....</th><!----------align靠左右-------------->
+  <th align="right">一月</th>
+  <th align="right">二月</th>
+ </tr>
+ <tr>
+  <td align="left">衣服</td>
+  <td align="right">$241.10</td>
+  <td align="right">$50.20</td>
+ </tr>
+ <tr>
+  <td align="left">化妆品</td>
+  <td align="right">$30.00</td>
+  <td align="right">$44.45</td>
+ </tr>
+ <tr>
+  <td align="left">食物</td>
+  <td align="right">$730.40</td>
+  <td align="right">$650.00</td>
+ </tr>
+ <tr>
+  <th align="left">总计</th>
+  <th align="right">$1001.50</th>
+  <th align="right">$744.65</th>
+ </tr>
+</table>
+
+
+
+<p><b>注释：</b>frame的应用</p>
+<table frame="box"><!----------box换成above、below、hsides、vsides-------------->
+<tr>
+<th>month</th>
+<th>days1</th>
+</tr>
+<tr>
+<th>month</th>
+<th>days2</th>
+</tr>
+
+
+
+<table width="100%" border="2">
+  <col align="right" />
+  <col align="right" />
+  <col align="left" /><!----------列的属性-------------->
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+  <tr>
+    <td>2489604</td>
+    <td>My first CSS</td>
+    <td>$47</td>
+  </tr>
+</table>
+
+
+ </body>
+</html>

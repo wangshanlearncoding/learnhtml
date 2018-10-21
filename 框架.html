@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en"><!---------------垂直框架-----------framest:框架结构标签----->
+ 
+  <frameset cols="25%,50%,25%"><!-------------------------------------------不能将 <body></body> 标签与 <frameset></frameset> 标签同时使用！不过，假如你添加包含一段文本的 <noframes> 标签，就必须将这段文字嵌套于 <body></body> 标签内。--------------------------> 
+
+  <frame src="https://www.taobao.com/">
+  <frame src="https://hf.58.com/?utm_source=market&spm=b-31580022738699-pe-f-829.hao360_101">
+  <frame src="https://www.suning.com/?utm_source=hao360&utm_medium=mingzhan">
+
+  <noframes>
+<body>您的浏览器无法处理框架！</body>
+</noframes>
+
+
+</frameset>
+ 
+</html>
+
+
+
+
+
+<html  ><!---------------水平框架------------ctrl+x查看另一个--------------> 
+
+<frameset rows="25%,50%,25%">
+
+  <frame src="https://www.taobao.com/">
+  <frame src="https://hf.58.com/?utm_source=market&spm=b-31580022738699-pe-f-829.hao360_101">
+  <frame src="https://www.suning.com/?utm_source=hao360&utm_medium=mingzhan">
+
+</frameset>
+
+</html>
+
+
+
+
+
+<html>
+
+<frameset rows="50%,50%"><!-----------------------混合框架-------------------------->
+
+<frame src="/example/html/frame_a.html">
+
+<frameset cols="25%,75%">
+<frame src="/example/html/frame_b.html"  noresize="noresize" /><!-----------------------noresize防止被拖动-------------------------->
+<frame src="/example/html/frame_c.html">
+</frameset>
+
+</frameset>
+
+</html>
+
+
+
+
+<html>
+<body><!-----------------------frame内联框架-------------------------->
+<frame src="/example/html/frame_c.html">
+
+<iframe src="/i/eg_landscape.jpg"></iframe>
+
+<p>一些老的浏览器不支持 iframe。</p>
+<p>如果得不到支持，iframe 是不可见的。</p>
+
+
+</body>
+</html>
