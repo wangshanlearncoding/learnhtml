@@ -19,7 +19,7 @@
 
 
 
-                    <form action="/example/html5/demo_form.asp" method="get" id="form1"><!-----q去掉这里的id="form1",last name的内容就不在提交里面了-->>
+                    <form action="/example/html5/demo_form.asp" method="get" id="form1"><!-----form 属性规定 <input> 元素所属的一个或多个表单，去掉这里的id="form1",last name的内容就不在提交里面了-->
                         First name: <input type="text" name="fname" /><br />
                         <input type="submit" value="提交" />
                         </form>                        
@@ -29,7 +29,7 @@
                     <br>
                     <br>
 
-                    <form action="/example/html5/demo_form.asp" method="get"><!-----formaction 属性规定当提交表单时处理该输入控件的文件的 URL，适用于 type="submit" 以及 type="image"-->>
+                    <form action="/example/html5/demo_form.asp" method="get"><!-----formaction 属性规定当提交表单时处理该输入控件的文件的 URL，适用于 type="submit" 以及 type="image"-->
                             First name: <input type="text" name="fname" /><br />
                             Last name: <input type="text" name="lname" /><br />
                             <input type="submit" value="提交" /><br />
@@ -38,11 +38,116 @@
                     <br>
                     <br>
                     <br>
-                    <form action="/example/html5/demo_post_enctype.asp" method="post"><!-----formenctype 属性规定当把表单数据（form-data）提交至服务器时如何对其进行编码（仅针对 method="post" 的表单），适用于 type="submit" 以及 type="image"-->>
+                    <form action="/example/html5/demo_post_enctype.asp" method="post"><!-----formenctype 属性规定当把表单数据（form-data）提交至服务器时如何对其进行编码（仅针对 method="post" 的表单），适用于 type="submit" 以及 type="image"-->
                         First name: <input type="text" name="fname" /><br />
                       <input type="submit" value="提交" />
                       <input type="submit" formenctype="multipart/form-data" value="以 Multipart/form-data 编码提交" />
                       </form>
+                    <br>
+                    <br>
+                    <br>
+                        
+
+                    <form action="/example/html5/demo_form.asp" method="get"><!-----formmethod 属性定义用以向 action URL 发送表单数据（form-data）的 HTTP 方法。formmethod 属性覆盖 <form> 元素的 method 属性,适用于 type="submit" 以及 type="image"-->>
+                        First name: <input type="text" name="fname" /><br />
+                        Last name: <input type="text" name="lname" /><br />
+                      <input type="submit" value="提交" />
+                      <input type="submit" formmethod="post" formaction="/example/html5/demo_post.asp" value="使用 POST 提交" />
+                      </form>
+                      <br>
+                    <br>
+                    <br>
+
+                    <form action="/example/html5/demo_form.asp" method="get"><!------formnovalidate 属性覆盖 <form> 元素的 novalidate 属性,可用于 type="submit"--------->
+                        E-mail: <input type="email" name="userid" /><br />
+                        <input type="submit" value="提交" /><br />
+                        <input type="submit" formnovalidate="formnovalidate" value="进行没有验证的提交" />
+                        </form>
+                        <br>
+                        <br>
+                        <br>
+
+                    <form action="/example/html5/demo_form.asp" method="get"><!------formtarget 属性规定的名称或关键词指示提交表单后在何处显示接收到的响应。formtarget 属性会覆盖 <form> 元素的 target 属性。formtarget 属性可与 type="submit" 和 type="image" 使用。--------->
+                            First name: <input type="text" name="fname" /><br />
+                            Last name: <input type="text" name="lname" /><br />
+                          <input type="submit" value="提交" />
+                          <input type="submit" formtarget="_blank" value="提交到新窗口/选项卡" />
+                          </form>
+                          <br>
+                        <br>
+                        <br>
+
+                    <form action="/example/html5/demo_form.asp" method="get">
+                            First name: <input type="text" name="fname" /><br />
+                            Last name: <input type="text" name="lname" /><br />
+                            <input type="image" src="/i/eg_submit.jpg" alt="Submit" width="128" height="128"/><!------height 和 width 属性规定 <input> 元素的高度和宽度,仅用于 <input type="image">--------->
+                          </form>
+                          <p><b>注释：</b>默认地，image 输入类型会发生点击图像按钮时的 X 和 Y 坐标。</p>
+                          <br>
+                        <br>
+                        <br>
+
+                        <input list="cars" /><!------list 属性引用的 <datalist> 元素中包含了 <input> 元素的预定义选项--------->
+                             <datalist id="cars">
+	                         <option value="BMW">
+                            <option value="Ford">
+	                        <option value="Volvo">
+                        </datalist>
+                        <br>
+                        <br>
+                        <br>
+
+                        <form action="/example/html5/demo_form.asp" method="get"><!------multiple则规定允许用户在 <input> 元素中输入一个以上的值--------->
+                            选择图片：<input type="file" name="img" multiple="multiple" />
+                            <input type="submit" />
+                            </form>
+                            <p>请尝试在浏览文件时选取一个以上的文件。</p>
+                            <br>
+                            <br>
+                            <br>
+
+                        <form action="/example/html5/demo_form.asp" method="get"><!------pattern 属性规定用于检查 <input> 元素值的正则表达式,title提示作用；联合使用？？-------->
+                             国家代码：<input type="text" name="country_code" pattern="[A-z]{3}"
+                             title="三个字母的国家代码aaa" />
+                             <input type="submit" />
+                            </form>
+                            <br>
+                            <br>
+                            <br>
+
+                         <form action="/example/html5/demo_form.asp" method="get"><!------placeholder 属性规定用以描述输入字段预期值的提示-------->
+                            <input type="search" name="user_search" placeholder="Search W3School" />
+                           <input type="submit" />
+                             </form>
+                             <br>
+                             <br>
+                             <br>
+                               
+                                
+                             <form action="/example/html5/demo_form.asp" method="get"><!-----required规定在提交表单之前必须填写输入字段-------->
+                                Name: <input type="text" name="usr_name" required="required" />
+                                <input type="submit" value="提交" />
+                                </form> 
+                                <br>
+                             <br>
+                             <br>  
+                             
+                            <form action="/example/html5/demo_form.asp" method="get"><!-----step 属性规定 <input> 元素的合法数字间隔-------->
+                             <input type="number" name="points" step="3" />
+                               <input type="submit" />
+                                  </form>
+
+
+
+
+
+                             
+
+                             
+                             
+                             
+
+                        
                         
 
 
