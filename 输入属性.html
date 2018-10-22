@@ -1,1 +1,49 @@
-<head>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>
+         <ol start="1" type="1">
+                <li>value 属性规定输入字段的初始值</li><br>
+                <li>readonly 属性规定输入字段为只读（不能修改）</li><br>
+                <li>disabled 属性规定输入字段是禁用的</li><br>
+                <li>size 属性规定输入字段的尺寸（以字符计）</li><br>
+                <li>maxlength 属性规定输入字段允许的最大长度</li><br>
+                <li>autocomplete 属性规定表单或输入字段是否应该自动完成,以把表单的 autocomplete 设置为 on，同时把特定的输入字段设置为 off</li><br>
+                <li>novalidate 属性属于 form 属性。  如果设置，则 novalidate 规定在提交表单时不对表单数据进行验证</li><br>
+                <li>autofocus 属性是布尔属性。如果设置，则规定当页面加载时 <input> 元素应该自动获得焦点</li><br>
+                <li>novalidate 属性属于 <form> 属性。  如果设置，则 novalidate 规定在提交表单时不对表单数据进行验证</li><br>
+                    <br>
+                    <br>
+                    <br>
+
+
+
+                    <form action="/example/html5/demo_form.asp" method="get" id="form1"><!-----q去掉这里的id="form1",last name的内容就不在提交里面了-->>
+                        First name: <input type="text" name="fname" /><br />
+                        <input type="submit" value="提交" />
+                        </form>                        
+                        <p>下面的 "Last name" 字段位于 form 元素之外，但仍然是表单的一部分。</p>                        
+                        Last name: <input type="text" name="lname" form="form1" />
+                    <br>
+                    <br>
+                    <br>
+
+                    <form action="/example/html5/demo_form.asp" method="get"><!-----formaction 属性规定当提交表单时处理该输入控件的文件的 URL，适用于 type="submit" 以及 type="image"-->>
+                            First name: <input type="text" name="fname" /><br />
+                            Last name: <input type="text" name="lname" /><br />
+                            <input type="submit" value="提交" /><br />
+                            <input type="submit" formaction="/example/html5/demo_admin.asp" value="以管理员身份提交" />
+                            </form>
+                    <br>
+                    <br>
+                    <br>
+                    <form action="/example/html5/demo_post_enctype.asp" method="post"><!-----formenctype 属性规定当把表单数据（form-data）提交至服务器时如何对其进行编码（仅针对 method="post" 的表单），适用于 type="submit" 以及 type="image"-->>
+                        First name: <input type="text" name="fname" /><br />
+                      <input type="submit" value="提交" />
+                      <input type="submit" formenctype="multipart/form-data" value="以 Multipart/form-data 编码提交" />
+                      </form>
+                        
+
+
+</html>
