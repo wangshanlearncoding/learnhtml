@@ -1,0 +1,66 @@
+<html>
+ <head>
+ </head>
+ <body>
+  <p>
+  head 元素是所有头部元素的容器。head 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等。
+以下标签都可以添加到 head 部分：title、base、link、meta、script 以及 style。
+
+基底网址标签是base，它有两个属性，href和_target。href用于设置基底网址的路径，_target用于设置超级链接的打开方式。
+html  
+head  
+title基底网址的设置title  
+<base href="http://www.google.com" target="_blank" />  
+</head>  
+<body>  
+</body>  
+</html> 
+
+
+
+
+meta标签属性分两种：页面描述属性（name）和http标题信息（http-equiv）
+
+
+name属性主要用于描述网页的内容，用于对搜索引擎的优化，必须重点掌握：
+<1>keywords。即关键字，用于说明网页所包含的关键字等信息，从而提高被搜索引擎搜索到的概率。编写格式为
+<meta name="keywords" content =“关键字”/>，content属性的值为用户所设置的具体关键字。（一般可设置多
+<2>description。中文意思为"描述"，用于描述网页的主要内容、主题等，合理设置也可以提高被搜索引擎搜索到
+的概率。格式为<meta name="description" content =“对页面的描述”/>，content属性值为用户所设置的页面
+具体描述的内容，最多容纳1024个字符，但搜索引擎一边只显示约前175个字符。个关键字，他们之间用英文半角
+的逗号分开，搜索引擎都限制关键字的数量，所以关键字内容要简洁精练）
+<3>author。作者，用于设置网站作者的名称，比较专业的网站经常用到。格式为<meta name="author" content =“作者名称”/>
+<4>generator。生成器，用于设置网站编辑工具的名称，比较专业的网站页面上经常用到。
+格式<meta name="generator" content =“网站编辑工具名称”/>
+<5>robots。机器人，用于限制页面搜索方式。搜索引擎的搜索机器人，沿着网页上的链接（如http和src链接），
+不断地检索资料建立自己的数据库。通过这种meta标签可以限制部分内容不被搜索引擎检测到，降低部分信息公开性。
+编写格式为<meta name=“robots” content="指令组合">。该属性的值包含4个命令，分别是index、noindex、follow、
+nofollow，根据排列组合，有4种组合。Index和follow组合也可称为all，noindex和nofollow也可称为none。
+
+
+http-equiv属性的取值具体如下：
+<1>content-type，内容类别，用于设置页面的类别和语言字符集。编写格式<meta http-equiv=“content-type”
+ context=“text/html”；charset=“gb2312”/>，content属性的值代表页面采用HTML代码输出，字符集为gb2312（简体中文），
+国际化网站开发的话，为了字符统一，建议charset采用utf-8.
+<2>refresh。刷新，用于设置多长时间内网页自己刷新一次，或者用一段时间自动跳转到其他页面，第一种编写格式
+<meta http-equiv=“refresh” context=“30”/>表示隔30秒刷新一次，第二种编写格式<meta http-equiv=“refresh” 
+ context=“30；url=www.google.com”/>，表示30秒后页面自动跳转到www.google.com网站
+<3>expires，中文意思为“到期”，用于设置页面到期时间。一旦网页过期，必须到服务器上重新调用网页。第一种编写格式
+为<meta http-equiv=“expires” context=“Wed,10 Mar 2011 12：00：00 GMT”/>，content值代表网页过期的时间，必须使
+用GMT时间格式。第二种编写格式为<meta http-equiv=“expires” context=“30”/>，表示多少秒后过期。context=“30；
+url=www.google.com”/>，表示30秒后页面自动跳转到www.google.com网站
+<3>expires，中文意思为“到期”，用于设置页面到期时间。一旦网页过期，必须到服务器上重新调用网页。第一种编写格式为
+<meta http-equiv=“expires” context=“Wed,10 Mar 2011 12：00：00 GMT”/>，content值代表网页过期的时间，必须使用
+GMT时间格式。第二种编写格式为<meta http-equiv=“expires” context=“30”/>，表示多少秒后过期。
+<4>cache-control，缓存控制。用于禁止在缓存中调用网页，编写格式为<meta http-equiv=“cache-control” 
+context=“no-cache”/>，no-cache代表不允许缓存
+<5>set-cookie，设置cookie，用于设置本页面cookie多久过期，编写格式为<meta http-equiv=“set-cookie”
+ context=“Wed,10 Mar 2011 12：00：00 GMT”/>，代表到这个时间，cookie将被删除。
+
+
+
+
+
+</p>
+</body>
+</html>
