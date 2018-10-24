@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+ <html> 
+  <head> 
+  <meta charset="utf-8"/>
+    <title></title> 
+  </head> 
+  <body> <!--draggable="true"设置元素为可拖放;
+    拖动开始和设置拖动数据-ondragstart和setData;
+    ondragover规定被拖动的数据放置在何处;
+    进行放置-ondrop-->>
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px green solid;width: 300px;height:250px;"></div>
+      <img id="div3" src="QQ图片20150925120406.jpg" draggable="true" ondragstart="drag(event)" style="border:1px red solid;width: 200px;height:100px;">
+      <div id="div2" draggable="true" ondragstart="drag(event)" style="border:1px red solid;width: 200px;height:100px;">hahahhahhahahahaha</div>
+   </body> 
+   <script>
+     function allowDrop(ev){
+        ev.preventDefault();
+     }
+     function drag(ev){
+      ev.dataTransfer.setData("dd",ev.target.id);
+     }
+     function drop(ev){
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("dd");
+        ev.target.appendChild(document.getElementById(data));
+     }
+   </script>
+</html>
