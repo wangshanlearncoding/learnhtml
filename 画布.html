@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas><!--canvas 元素使用 JavaScript 在网页上绘制图像-->>
+
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+cxt.moveTo(10,10);
+cxt.lineTo(150,50);
+cxt.lineTo(10,50);
+cxt.stroke();
+
+</script>
+<br>
+<br>
+<br>
+<p>HTML5 内联 SVG,SVG 指可伸缩矢量图形</p>
+
+</body>
+</html>
