@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+</style>
+<script>
+    function toDou(n){
+        if(n<10)
+        {
+            return'0'+n;
+        }
+        else{
+            return ''+n;
+        }
+    };
+    window.onload=function()
+    {
+        function tick()
+    {
+        var Img=document.getElementsByTagName('image');
+        //var str='140500';
+        
+        var oDate=new Date();
+        var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+
+        for(var i=0;i<Img.length;i++)
+        {
+            Img[i].src='i/图片'+str.charAt(i)+'.png';
+        }
+     }
+        setInterval(tick,1000);
+        tick();
+    };
+</script>
+</head>
+
+<body style="font-size:50px">
+    <image src="i/图片1.png"/>
+    <image src="i/图片1.png"/>
+    :
+    <image src="i/图片1.png"/>
+    <image src="i/图片1.png"/>
+    :
+    <image src="i/图片1.png"/>
+    <image src="i/图片1.png"/>
+</body>
+</html>

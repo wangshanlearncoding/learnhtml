@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+   
+    
+    body{
+        margin-left:50px;
+    }
+
+    #fj{
+        list-style: none;
+        padding:0;
+    }
+
+    #fj li{
+        float:left;
+        margin-left:10px;
+    }
+
+    #big{
+        margin-left:10px;
+    }
+
+    #des{
+        margin:10px;
+        color:red;
+        font-size:20px;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <p id="des">图片1</p>
+
+    <img id="big" src="i/图片0.png" alt="图片" width="240px"/>
+
+    <ul id="fj">
+        <li>
+            <a href="i/图片0.png" title="图片0">
+            <img src="i/图片0.png" width="100" alt="图片0">
+            </a>
+        </li>
+
+        <li>
+                <a href="i/图片1.png" title="图片1">
+                <img src="i/图片1.png" width="100" alt="图片1">
+                </a>
+        </li>
+
+        <li>
+                <a href="i/图片2.png" title="图片2">
+                <img src="i/图片2.png" width="100" alt="图片2">
+                </a>
+        </li>
+    </ul>
+
+    <script>
+    window.onload=function(){
+        var ul=document.getElementById("fj");
+        var aList=ul.getElementsByTagName("a");
+        var des=document.getElementById("des");
+        var big=document.getElementById("big");
+        for(var i=0;i<aList.length;i++){
+            aList[i].onclick=function(){
+               big.src= this.href;
+               des.innerText=this.title;
+               return false;
+
+            }        }
+
+    }
+    </script>
+    <script>
+    console.log(document);
+    console.log(document.childNodes)
+    </script>
+</body>
